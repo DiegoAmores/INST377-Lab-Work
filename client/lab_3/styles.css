@@ -6,23 +6,14 @@
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
-    img{
-        max-width:100%;
-    }
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-    img{
-        max-width:100%;
-    }
 }
 
 /* Desktop Styles*/
 @media only screen and (min-width: 961px) {
-    img{
-        max-width: 100%;
-    }
 }
 
 a {
@@ -125,3 +116,7 @@ a {
             flex: initial;
             width: 300px;
         }
+        
+img{
+    max-width:100%;
+    }
