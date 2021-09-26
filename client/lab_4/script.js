@@ -18,7 +18,6 @@ nextButton.addEventListener("click", function(){
 
 prevButton.addEventListener("click", function(){
 
-    nextButton.style.removeProperty('background-color')
     prevButton.style.setProperty('background-color', 'orange');
 
     if(nextButton.style.backgroundColor === 'orange'){
