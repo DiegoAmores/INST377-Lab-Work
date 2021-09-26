@@ -1,0 +1,164 @@
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+}
+
+/* Desktop Styles*/
+@media only screen and (min-width: 961px) {
+}
+
+*, wrapper{
+    margin: 0;
+    padding: 0;
+    font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+h3{
+    font-weight: bold;
+}
+
+    .section_one_container{
+        display: flex;
+        background-color: rgba(0,139, 139,0.8);
+        padding: 5px 15px;
+    }
+
+    .section_two_container{
+        color:#FFF;
+        background-color: #5995DA;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+        .section_two{
+            border: 1px solid #FFF;
+            width: 900px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .section_two_links{
+                border: 1px solid #FFF;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+                .database{
+                    margin: 0px 20px 0px 20px
+                }
+
+                .database > a, .main_page > a{
+                    color: #FFF;
+                }
+
+    .section_three_container{
+        color: #5995DA;
+        background-color: #D6E9FE;
+        display: flex;
+        justify-content: center;
+    }
+
+        .section_three{
+            width: 900px;
+            height: 300px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .group_project, .github{
+                display: flex;
+                align-self: flex-end;
+                margin-bottom: 20px;
+            }
+    
+    .section_four_container{
+        display: flex;
+        justify-content: center;
+    }
+            
+        .carousel{
+            overflow: hidden;
+            position: relative;
+            max-width: 300px;
+            max-height: 300px;
+        }
+
+        .carousel .carousel_item{
+            display: none;
+
+        }
+
+        .carousel .carousel_item img{
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+            
+        .carousel .carousel_item--visible{
+            display:block;
+        }
+
+        .carousel .carousel-item--visible{
+            display: block;
+            animation: fadeVisibility 0.5s;
+        }
+
+        button{
+            height: 10%;
+            padding:5px;
+            align-self: center;
+            font-weight: bold;
+            border: none;
+        }
+
+        #carousel_button_prev{
+            margin-right: 10px;
+        }
+        
+        #carousel_button_next{
+            margin-left: 10px;
+            
+        }
+
+    .section_five_container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .footer_item{
+            border: 1px solid #FFF;
+            background-color: #D6E9FE;
+            height: 200px;
+            flex: 1;
+        }
+
+        .footer_one, .footer_three{
+            background-color: #5995DA;
+            flex: initial;
+            width: 300px;
+        }
+        
+img{
+    max-width:100%;
+    }
+
+@keyframes fadeVisibility{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: opacity linear;
+    }
+}
+    
