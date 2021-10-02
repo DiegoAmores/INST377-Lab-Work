@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>HTML Forms, HTTP Methods, REST APIs</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="columns is-mobile">
+                <div class="column is-11"><h1>Diego's Lab 5</h1></div>
+            </div>
+
+            <div class="columns is-vcentered is-mobile">
+                <div class="column is-2">
+                    <form action="/api" method="get" class="UMD-Dining">
+                      <div class="info">
+                        <label for="first-name">First Name</label>
+                        <input id="first-name" name="first-name" type="text" />
+                        <label for="food-preference">Food Preference</label>
+                        <input id="food-preference" name="food-preference" type="text" />
+
+                        <fieldset class='radio-buttons'>
+                            <legend>Veggie or Vegan?</legend>
+
+                            <input id='yes-veggie'
+                                name='question'
+                                type='radio'
+                                value='yes' />
+                            <label for='yes-veggie' class='radio-label'>Yes</label>
+
+                            <input id='no-vegan'
+                                name='question'
+                                type='radio'
+                                value='no'
+                                checked />
+                            <label for='no-vegan' class='radio-label'>No</label>
+                        </fieldset>
+
+                        <div class="button-container">
+                          <button class="button is-mobile is-primary">Submit</div>
+                        </div>
+                      
+                    </form>
+                    </div>
+                    <div class="column is-5">
+                      This is going to be something in two weeks
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

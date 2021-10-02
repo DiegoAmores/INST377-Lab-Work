@@ -9,19 +9,95 @@ body {
   padding: 0;
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
     ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
-  background-color: darkslategray;
+  background-color: gray;
 }
 
 /* Page Layout */
 .columns {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .wrapper {
   display: flex;
+  justify-self: center;
 }
 .container {
   max-width: 960px;
   margin-top: 25px;
+}
+
+.UMD-Dining{
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+
+  max-width: 100%;
+  padding: 10px;
+}
+
+.column.is-11{
+  display: flex;
+  flex-direction: row;
+  background-color: aqua;
+  border-radius: 5px;
+}
+
+.column.is-11 h1{
+  font-size: 24px;
+}
+
+.columns.is-vcentered.is-mobile{
+  display: flex;
+  justify-content: center;
+}
+
+.info{
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap:wrap;
+  border-radius: 5px;
+}
+
+.info input[type='text'] {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  padding: 3px;
+  max-width: 100%;
+  align-items: center;
+}
+
+.info label{
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.buttons{
+  border: none;
+  margin-bottom: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.buttons legend{
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.buttons input[type='radio']{
+  margin-top: 2px;
+  padding:10px;
+}
+
+.column.is-5{
+  display: flex;
+  border-radius: 5px;
+  background-color: #FFFFFF;
 }
