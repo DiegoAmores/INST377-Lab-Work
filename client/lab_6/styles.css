@@ -1,0 +1,20 @@
+.wrapper {
+    display:flex;
+    flex-direction: column;
+    font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+    margin:10px;
+  }
+  
+  .title{
+    display: inline-block;
+    background-color: goldenrod;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  .search{
+      margin-top: 10px;
+      padding: 10px;
+  }
