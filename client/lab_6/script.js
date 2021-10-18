@@ -1,27 +1,28 @@
-async function windowActions(event){
-    const url = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
-    const request = await fetch(url);
-    const restaurants = await request.json();
+async function windowActions() {
+  const url = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
+  const request = await fetch(url);
+  const restaurants = await request.json();
+  const searchInput = document.querySelector('.search');
+  const suggestions = document.querySelector('.suggestions');
 
-    function findMatches(wordToMatch, restaurants){
-        return restaurants.filter(place => {
+  function findMatches(wordToMatch, rests) {
+    return rests.filter((place) => {
+      const regex = new RegExp(wordToMatch, 'gi');
+      // eslint-disable-next-line max-len
+      return place.category.match(regex) || place.zip.match(regex) || place.name.match(regex) || place.city.match(regex);
+    });
+  }
 
-            const regex = new RegExp(wordToMatch, 'gi');
-            return place.category.match(regex) || place.zip.match(regex) || place.name.match(regex) || place.city.match(regex); 
-        });
-    }
+  function displayMatches(evt) {
+    const matchArray = findMatches(evt.target.value, restaurants);
 
-    function displayMatches(event){
-        const matchArray = findMatches(event.target.value, restaurants);
+    if (!evt.target.value) {
+      document.querySelector('.suggestions').innerHTML = '';
+    } else {
+      const html = matchArray.map((place) => {
+        RegExp(evt.target.value, 'gi');
 
-        if(!event.target.value){
-            document.querySelector('.suggestions').innerHTML = '';
-            
-        } else {
-            const html = matchArray.map(place => {
-                const regex = new RegExp(event.target.value, 'gi');
-
-                return `
+        return `
                 <li>
                     <span class = "name">${place.name}</span>
                     <br>
@@ -35,18 +36,14 @@ async function windowActions(event){
                 </li>
                 <br>
                 `;
+      }).join('');
 
-            }).join('');
-            suggestions.innerHTML = html;
-        }
+      suggestions.innerHTML = html;
     }
+  }
 
-    const searchInput = document.querySelector('.search');
-    const suggestions = document.querySelector('.suggestions');
-
-    searchInput.addEventListener('change', displayMatches);
-    searchInput.addEventListener('keyup', (evt) => {displayMatches(evt)});
-
+  searchInput.addEventListener('change', displayMatches);
+  searchInput.addEventListener('keyup', (evt) => { displayMatches(evt); });
 }
 
 window.onload = windowActions;
