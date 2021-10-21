@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 function loadLeafy(mymap) {
   const ACCESSTOKEN = 'pk.eyJ1IjoiZGllZ29hbW9yZXMiLCJhIjoiY2t1dXZ6OHZ0NjQ2MzMybnp2MGRpeWYwZSJ9.j2RBwFJGDI4AYqyhUPRJQQ';
 
@@ -15,7 +16,7 @@ function findMatches(wordToMatch, rests) {
   return rests.filter((place) => {
     const regex = new RegExp(wordToMatch, 'gi');
     // eslint-disable-next-line max-len
-    return place.category.match(regex) || place.zip.match(regex) || place.name.match(regex) || place.city.match(regex);
+    return ((place.category.match(regex) || place.zip.match(regex) || place.name.match(regex) || place.city.match(regex)) && place.geocoded_column_1 !== undefined);
   });
 }
 
